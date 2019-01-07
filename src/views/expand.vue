@@ -1,6 +1,7 @@
 <template>
+<!-- <div>{{row.list}}</div> -->
     <Table
-        :column="column"
+        :columns="columns"
         :data="row.list"
         @on-selection-change="getPath"
     ></Table>
@@ -12,7 +13,7 @@ export default {
     },
     data() {
         return {
-            column: [
+            columns: [
                 {
                     type: 'selection',
                     width: 60
@@ -26,7 +27,7 @@ export default {
     },
     methods: {
         getPath(row) {
-            console.log('row',row);
+            console.log('row',this.row);
         }
     }
 }
